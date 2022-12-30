@@ -32,7 +32,7 @@ def add_parser(parser):
     parser.add_argument(
         '--base-json',
         type=str,
-        default=None,
+        default='./split_configs/ss_train.json',
         help='json config file for split images')
     parser.add_argument(
         '--nproc', type=int, default=10, help='the procession number')

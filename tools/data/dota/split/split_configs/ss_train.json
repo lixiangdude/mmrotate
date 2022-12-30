@@ -1,10 +1,7 @@
 {
   "nproc": 10,
   "img_dirs": [
-    "data/DOTA/train/images/"
-  ],
-  "ann_dirs": [
-    "data/DOTA/train/labelTxt/"
+    "/patch_stu/datasets_hw/test/images"
   ],
   "sizes": [
     1024
@@ -23,6 +20,6 @@
     116,
     124
   ],
-  "save_dir": "data/split_ss_dota/train/",
+  "save_dir": "data/split_ss_dota/test/",
   "save_ext": ".png"
 }
