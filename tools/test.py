@@ -24,7 +24,7 @@ def parse_args():
     """Parse parameters."""
     parser = argparse.ArgumentParser(
         description='MMDet test (and eval) a model')
-    parser.add_argument('--config', default='/mmrotate/configs/rotated_faster_rcnn/rotated_faster_rcnn_r50_fpn_1x_dota_le90.py', help='test config file path')
+    parser.add_argument('--config', default='/mmrotate/configs/oriented_rcnn/oriented_rcnn_r50_fpn_1x_dota_le90.py', help='test config file path')
     parser.add_argument('--checkpoint', default='/mmrotate/trained_result/latest.pth', help='checkpoint file')
     parser.add_argument(
         '--work-dir',

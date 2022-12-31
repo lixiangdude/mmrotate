@@ -24,7 +24,7 @@ from mmrotate.utils import collect_env, get_root_logger, setup_multi_processes
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')
     parser.add_argument('--config', default='/mmrotate/configs/oriented_rcnn/oriented_rcnn_r50_fpn_1x_dota_le90.py', help='train config file path')
-    parser.add_argument('--work-dir', default='/mmrotate/trained_result_oriented_rcnn', help='the dir to save logs and models')
+    parser.add_argument('--work-dir', default='/mmrotate/trained_result_oriented_rcnn_new', help='the dir to save logs and models')
     parser.add_argument(
         '--resume-from', help='the checkpoint file to resume from')
     parser.add_argument(
@@ -166,6 +166,9 @@ def main():
     model.init_weights()
 
     datasets = [build_dataset(cfg.data.train)]
+    print('=============================')
+    print(datasets)
+    print('=============================')
     if len(cfg.workflow) == 2:
         val_dataset = copy.deepcopy(cfg.data.val)
         val_dataset.pipeline = cfg.data.train.pipeline
